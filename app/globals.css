@@ -2,26 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #0f172a;
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
+.article {
+  --p: 198.44 93.204% 59.608%;
+  --pf: 198.44 93.204% 47.686%;
+  --tw-shadow-color: hsl(var(--pf, var(--p)));
+  box-shadow: 0 0 8px 2px transparent;
+  border: 0 !important;
+  z-index: 99;
+}
+.article:hover {
+  --p: 198.44 93.204% 59.608%;
+  --pf: 198.44 93.204% 47.686%;
+  --tw-shadow-color: hsl(var(--pf, var(--p)));
+  box-shadow: 0 0 8px 2px var(--tw-shadow-color);
+  border: 0 !important;
+  z-index: 99;
+}
+
+/* .prose.prose-loading.prose-invert * {
+  border-radius: 15px;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(65, 72, 79) !important;
+  color: transparent !important;
+}
+.pros.prose-loading.prose-invert > h1,h2,h3 {
+  height: 35px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+} */
